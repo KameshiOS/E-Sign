@@ -1,0 +1,20 @@
+PODS:
+  - ChromaColorPicker (1.7)
+  - OXPatternLock (1.0)
+
+DEPENDENCIES:
+  - ChromaColorPicker
+  - OXPatternLock
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ChromaColorPicker
+    - OXPatternLock
+
+SPEC CHECKSUMS:
+  ChromaColorPicker: 33efa67b17cca51dd253689d18b83ac7e05642c2
+  OXPatternLock: 02fec8b67839018dcaa2765011933e5648cb714a
+
+PODFILE CHECKSUM: d1c77c67acbedfe5eaedaf24d9e813008642dcb5
+
+COCOAPODS: 1.5.2

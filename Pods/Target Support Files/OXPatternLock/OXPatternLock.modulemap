@@ -1,0 +1,6 @@
+framework module OXPatternLock {
+  umbrella header "OXPatternLock-umbrella.h"
+
+  export *
+  module * { export * }
+}

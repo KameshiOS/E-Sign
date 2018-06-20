@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dla-ow-17z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QJc-af-zmy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dla-ow-17z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uIn-Rq-2AT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QEy-8N-jyV" kind="relationship" relationship="rootViewController" id="cyE-vL-LxM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZY0-5e-afV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="45.42728635682159"/>
+        </scene>
+        <!--DigiSign-->
+        <scene sceneID="Mc7-HA-mZv">
+            <objects>
+                <viewController id="QEy-8N-jyV" customClass="SignatureViewController" customModule="E_Sign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eoc-3g-b9s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8zb-tG-e5U">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="176" id="D8n-Ui-xWD" customClass="SignatureTableViewCell" customModule="E_Sign" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="176"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D8n-Ui-xWD" id="DNL-Eu-NDz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IRG-Xq-2xv" customClass="ImageViewDesign" customModule="E_Sign" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="11" width="345" height="154"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.91366964579999999" green="0.93301886320000005" blue="0.94384330510000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IRG-Xq-2xv" secondAttribute="trailing" id="GVs-qB-afH"/>
+                                                <constraint firstItem="IRG-Xq-2xv" firstAttribute="top" secondItem="DNL-Eu-NDz" secondAttribute="topMargin" id="KRR-qg-jgh"/>
+                                                <constraint firstItem="IRG-Xq-2xv" firstAttribute="leading" secondItem="DNL-Eu-NDz" secondAttribute="leadingMargin" id="Unt-oq-dwm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IRG-Xq-2xv" secondAttribute="bottom" id="xHA-yo-pPi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="signImageView" destination="IRG-Xq-2xv" id="k3G-57-FCS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8zb-tG-e5U" firstAttribute="top" secondItem="xQr-Zv-2dH" secondAttribute="top" id="AQ3-14-bpE"/>
+                            <constraint firstItem="xQr-Zv-2dH" firstAttribute="bottom" secondItem="8zb-tG-e5U" secondAttribute="bottom" id="L0X-a0-qBd"/>
+                            <constraint firstItem="8zb-tG-e5U" firstAttribute="leading" secondItem="xQr-Zv-2dH" secondAttribute="leading" id="RH2-ro-hhI"/>
+                            <constraint firstItem="xQr-Zv-2dH" firstAttribute="trailing" secondItem="8zb-tG-e5U" secondAttribute="trailing" id="szX-x0-vQX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xQr-Zv-2dH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DigiSign" largeTitleDisplayMode="always" id="MTd-Ec-ciu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="eNF-C1-RVc">
+                            <connections>
+                                <action selector="EditButtonAction:" destination="QEy-8N-jyV" id="Xjp-zd-nRz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="IlX-WQ-SPC">
+                            <connections>
+                                <action selector="AddButtonAction:" destination="QEy-8N-jyV" id="1RG-g5-0Xa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="IlX-WQ-SPC" id="OZr-pz-jcn"/>
+                        <outlet property="editButton" destination="eNF-C1-RVc" id="yki-E9-lRj"/>
+                        <outlet property="signTable" destination="8zb-tG-e5U" id="WRY-KQ-ncs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2OK-BY-3FS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="45.42728635682159"/>
+        </scene>
+        <!--Pattern Lock View Controller-->
+        <scene sceneID="OEV-Rw-c2e">
+            <objects>
+                <viewController storyboardIdentifier="PatternLockViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DRp-mU-TaH" customClass="PatternLockViewController" customModule="E_Sign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uhq-mz-Fhp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JqK-3Q-pRz" customClass="OXPatternLock" customModule="OXPatternLock">
+                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.36078431370000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Wq7-IV-LN6"/>
+                                    <constraint firstAttribute="width" constant="300" id="qo8-Zo-ItH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackLineThickness">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackLineColor">
+                                        <color key="value" red="1" green="0.69803921570000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01176470588" green="0.36078431370000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JqK-3Q-pRz" firstAttribute="centerY" secondItem="kQD-Ey-eaP" secondAttribute="centerY" id="adw-oT-vtt"/>
+                            <constraint firstItem="JqK-3Q-pRz" firstAttribute="centerX" secondItem="kQD-Ey-eaP" secondAttribute="centerX" id="fBg-Bn-3U1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kQD-Ey-eaP"/>
+                    </view>
+                    <connections>
+                        <outlet property="patternView" destination="JqK-3Q-pRz" id="ala-WT-rqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMv-Uz-Cs0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="780"/>
+        </scene>
+        <!--View Signature View Controller-->
+        <scene sceneID="db0-Ej-rvy">
+            <objects>
+                <viewController storyboardIdentifier="ViewSignatureViewController" id="JP0-bA-diS" customClass="ViewSignatureViewController" customModule="E_Sign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y6S-DS-apl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htE-vv-NJI">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zDR-KX-AG2"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="action" id="kux-Kn-PIp">
+                                        <connections>
+                                            <action selector="ShareButtonAction:" destination="JP0-bA-diS" id="TPp-3b-jR4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Z0q-fS-ltC"/>
+                                    <barButtonItem image="printer" id="Chb-ay-R7Z">
+                                        <connections>
+                                            <action selector="PrintAction:" destination="JP0-bA-diS" id="CXE-ps-Nzh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPf-h7-OBQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29a-Qj-d70">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="done" id="BhG-ea-IBr">
+                                        <connections>
+                                            <action selector="DoneButtonAction:" destination="JP0-bA-diS" id="URu-4k-MJ4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="29a-Qj-d70" secondAttribute="trailing" id="5nK-iH-rzO"/>
+                            <constraint firstItem="29a-Qj-d70" firstAttribute="leading" secondItem="5sD-Rp-BNI" secondAttribute="leading" id="LRP-gi-wzb"/>
+                            <constraint firstItem="5sD-Rp-BNI" firstAttribute="bottom" secondItem="htE-vv-NJI" secondAttribute="bottom" id="Pci-ov-k6W"/>
+                            <constraint firstItem="5sD-Rp-BNI" firstAttribute="trailing" secondItem="fPf-h7-OBQ" secondAttribute="trailing" id="TBL-UB-bZB"/>
+                            <constraint firstAttribute="trailing" secondItem="htE-vv-NJI" secondAttribute="trailing" id="TOG-96-4x3"/>
+                            <constraint firstItem="htE-vv-NJI" firstAttribute="top" secondItem="fPf-h7-OBQ" secondAttribute="bottom" id="exq-wA-dmA"/>
+                            <constraint firstItem="htE-vv-NJI" firstAttribute="leading" secondItem="5sD-Rp-BNI" secondAttribute="leading" id="gne-E5-V3l"/>
+                            <constraint firstItem="fPf-h7-OBQ" firstAttribute="leading" secondItem="5sD-Rp-BNI" secondAttribute="leading" id="m1G-OR-FLh"/>
+                            <constraint firstItem="fPf-h7-OBQ" firstAttribute="top" secondItem="29a-Qj-d70" secondAttribute="bottom" id="qV4-DE-cOV"/>
+                            <constraint firstItem="29a-Qj-d70" firstAttribute="top" secondItem="5sD-Rp-BNI" secondAttribute="top" id="tB4-d4-aA4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5sD-Rp-BNI"/>
+                    </view>
+                    <connections>
+                        <outlet property="printButton" destination="Chb-ay-R7Z" id="wlw-e8-tRV"/>
+                        <outlet property="signImage" destination="fPf-h7-OBQ" id="3S9-Us-OUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jn9-gT-fiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="771.36431784107947"/>
+        </scene>
+        <!--Add Signature View Controller-->
+        <scene sceneID="8z9-zs-KrW">
+            <objects>
+                <viewController storyboardIdentifier="AddSignatureViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DUz-fp-YCv" customClass="AddSignatureViewController" customModule="E_Sign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xa3-Vu-uwo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fl-wK-5fh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="a4A-tY-8zO">
+                                        <connections>
+                                            <action selector="CancelButtonAction:" destination="DUz-fp-YCv" id="uOR-5t-J8a"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="E9M-ku-CM3"/>
+                                    <barButtonItem title="Done" id="89W-d1-kHd">
+                                        <connections>
+                                            <action selector="DoneButtonAction:" destination="DUz-fp-YCv" id="afm-ka-MxM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Draw your signature below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-yZ-fXT">
+                                <rect key="frame" x="0.0" y="72" width="375" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqP-Kl-P9j">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="puQ-bM-rFD">
+                                        <connections>
+                                            <action selector="ClearButtonAction:" destination="DUz-fp-YCv" id="Mpc-9e-RMR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6Yv-kA-uqI"/>
+                                    <barButtonItem title="Item" image="color" id="0V6-U9-8ai">
+                                        <connections>
+                                            <action selector="ColorPickerButtonAction:" destination="DUz-fp-YCv" id="zYK-Rf-Tdh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Al-VH-Ng8" customClass="SignatureView" customModule="E_Sign" customModuleProvider="target">
+                                <rect key="frame" x="20" y="114" width="335" height="489"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="signatureBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D5S-XJ-lQr" firstAttribute="bottom" secondItem="uqP-Kl-P9j" secondAttribute="bottom" id="2Fv-hO-Jwn"/>
+                            <constraint firstItem="D5S-XJ-lQr" firstAttribute="trailing" secondItem="fdI-yZ-fXT" secondAttribute="trailing" id="4PZ-Jl-PUS"/>
+                            <constraint firstItem="fdI-yZ-fXT" firstAttribute="top" secondItem="5Fl-wK-5fh" secondAttribute="bottom" constant="8" id="HHU-de-2eE"/>
+                            <constraint firstItem="5Fl-wK-5fh" firstAttribute="top" secondItem="D5S-XJ-lQr" secondAttribute="top" id="JxX-dA-FNV"/>
+                            <constraint firstItem="uqP-Kl-P9j" firstAttribute="trailing" secondItem="D5S-XJ-lQr" secondAttribute="trailing" id="MG2-Th-MrY"/>
+                            <constraint firstItem="5Fl-wK-5fh" firstAttribute="trailing" secondItem="D5S-XJ-lQr" secondAttribute="trailing" id="Myc-Is-kH5"/>
+                            <constraint firstItem="uqP-Kl-P9j" firstAttribute="leading" secondItem="D5S-XJ-lQr" secondAttribute="leading" id="V2Z-YK-Ok3"/>
+                            <constraint firstItem="7Al-VH-Ng8" firstAttribute="top" secondItem="fdI-yZ-fXT" secondAttribute="bottom" constant="20" id="VRa-Tk-gVI"/>
+                            <constraint firstItem="D5S-XJ-lQr" firstAttribute="trailing" secondItem="7Al-VH-Ng8" secondAttribute="trailing" constant="20" id="ZSh-gy-v6C"/>
+                            <constraint firstItem="7Al-VH-Ng8" firstAttribute="leading" secondItem="D5S-XJ-lQr" secondAttribute="leading" constant="20" id="fZc-WI-xgR"/>
+                            <constraint firstItem="uqP-Kl-P9j" firstAttribute="top" secondItem="7Al-VH-Ng8" secondAttribute="bottom" constant="20" id="ga8-4t-83c"/>
+                            <constraint firstItem="fdI-yZ-fXT" firstAttribute="leading" secondItem="D5S-XJ-lQr" secondAttribute="leading" id="hO6-5z-iFY"/>
+                            <constraint firstItem="5Fl-wK-5fh" firstAttribute="leading" secondItem="D5S-XJ-lQr" secondAttribute="leading" id="rSt-vO-UCy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D5S-XJ-lQr"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="colorPicker" destination="2Hn-jw-bCy" id="a1C-xt-Yg2"/>
+                        <outlet property="colorView" destination="wUi-FE-0vH" id="o5A-w3-tAs"/>
+                        <outlet property="signView" destination="7Al-VH-Ng8" id="lri-Z5-5Sm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsG-oT-rMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="wUi-FE-0vH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-jw-bCy" customClass="ChromaColorPicker" customModule="ChromaColorPicker">
+                            <rect key="frame" x="37.5" y="50" width="300" height="300"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="402-Jj-UJY"/>
+                                <constraint firstAttribute="width" constant="300" id="xtR-uW-NrW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2Hn-jw-bCy" firstAttribute="centerY" secondItem="hgs-W8-KQm" secondAttribute="centerY" id="XVn-mz-Slu"/>
+                        <constraint firstItem="2Hn-jw-bCy" firstAttribute="centerX" secondItem="hgs-W8-KQm" secondAttribute="centerX" id="kMz-Er-IwE"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="hgs-W8-KQm"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1780" y="41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="color" width="30" height="30"/>
+        <image name="printer" width="30" height="30"/>
+    </resources>
+</document>
