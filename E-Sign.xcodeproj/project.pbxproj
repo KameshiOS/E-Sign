@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		701F1DE9D745716E3C9A5A36 /* Pods_E_Sign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3300AA26A7E098460E5D169D /* Pods_E_Sign.framework */; };
+		84151A1020DB63A70049C380 /* MultiImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84151A0F20DB63A70049C380 /* MultiImageViewController.swift */; };
 		8468F21620D8C665003DBD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468F21520D8C665003DBD88 /* AppDelegate.swift */; };
 		8468F21B20D8C665003DBD88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468F21920D8C665003DBD88 /* Main.storyboard */; };
 		8468F21E20D8C665003DBD88 /* E_Sign.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8468F21C20D8C665003DBD88 /* E_Sign.xcdatamodeld */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		3300AA26A7E098460E5D169D /* Pods_E_Sign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Sign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84151A0F20DB63A70049C380 /* MultiImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiImageViewController.swift; sourceTree = "<group>"; };
 		8468F21220D8C665003DBD88 /* E-Sign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Sign.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468F21520D8C665003DBD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8468F21A20D8C665003DBD88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				8468F23320D8C944003DBD88 /* AddSignatureViewController.swift */,
 				8468F23520D8DEC3003DBD88 /* PatternLockViewController.swift */,
 				84EA5BEB20D92AC400BB331C /* ViewSignatureViewController.swift */,
+				84151A0F20DB63A70049C380 /* MultiImageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,11 +256,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-E-Sign/Pods-E-Sign-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/OXPatternLock/OXPatternLock.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OXPatternLock.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +279,7 @@
 			files = (
 				8468F23420D8C944003DBD88 /* AddSignatureViewController.swift in Sources */,
 				8468F21E20D8C665003DBD88 /* E_Sign.xcdatamodeld in Sources */,
+				84151A1020DB63A70049C380 /* MultiImageViewController.swift in Sources */,
 				8468F22F20D8C6D3003DBD88 /* SignatureViewController.swift in Sources */,
 				8468F21620D8C665003DBD88 /* AppDelegate.swift in Sources */,
 				84EA5BEC20D92AC400BB331C /* ViewSignatureViewController.swift in Sources */,
@@ -429,7 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FD5T6PM798;
+				DEVELOPMENT_TEAM = 5KCAZ94GP6;
 				INFOPLIST_FILE = "E-Sign/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,7 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FD5T6PM798;
+				DEVELOPMENT_TEAM = 5KCAZ94GP6;
 				INFOPLIST_FILE = "E-Sign/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dla-ow-17z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eyJ-rA-aAz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,10 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--E-Sign-->
         <scene sceneID="QJc-af-zmy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dla-ow-17z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="E-Sign" id="yTY-Ij-Zhh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uIn-Rq-2AT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -38,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8zb-tG-e5U">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="176" id="D8n-Ui-xWD" customClass="SignatureTableViewCell" customModule="E_Sign" customModuleProvider="target">
@@ -108,7 +109,26 @@
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="45.42728635682159"/>
         </scene>
-        <!--Pattern Lock View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="8A4-5K-5XY">
+            <objects>
+                <tabBarController id="eyJ-rA-aAz" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cFk-NT-O6H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dla-ow-17z" kind="relationship" relationship="viewControllers" id="90E-Sq-cTJ"/>
+                        <segue destination="DRp-mU-TaH" kind="relationship" relationship="viewControllers" id="nMo-Ar-uzm"/>
+                        <segue destination="Ye3-NW-Fmt" kind="relationship" relationship="viewControllers" id="HEQ-YG-f5x"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQH-Tp-9lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="624"/>
+        </scene>
+        <!--Pattern-->
         <scene sceneID="OEV-Rw-c2e">
             <objects>
                 <viewController storyboardIdentifier="PatternLockViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DRp-mU-TaH" customClass="PatternLockViewController" customModule="E_Sign" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JqK-3Q-pRz" customClass="OXPatternLock" customModule="OXPatternLock">
-                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="169" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.36078431370000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Wq7-IV-LN6"/>
@@ -140,6 +160,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kQD-Ey-eaP"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Pattern" id="fyS-vd-DEN"/>
                     <connections>
                         <outlet property="patternView" destination="JqK-3Q-pRz" id="ala-WT-rqF"/>
                     </connections>
@@ -147,6 +168,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMv-Uz-Cs0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1078" y="780"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="9vW-of-vrP">
+            <objects>
+                <viewController id="Ye3-NW-Fmt" customClass="MultiImageViewController" customModule="E_Sign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpj-bI-oEP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-gD-CgS">
+                                <rect key="frame" x="20" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9v5-7r-YED"/>
+                                    <constraint firstAttribute="height" constant="100" id="Lvd-00-5Le"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XkB-o9-EK3">
+                                <rect key="frame" x="140" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FGG-5p-J4p"/>
+                                    <constraint firstAttribute="width" constant="100" id="c4n-Sb-ARq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVg-8G-8Ry">
+                                <rect key="frame" x="260" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="k2U-wr-urf"/>
+                                    <constraint firstAttribute="width" constant="100" id="yzi-KR-vKj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kQN-g8-cyC">
+                                <rect key="frame" x="20" y="160" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Vm5-1p-HV8"/>
+                                    <constraint firstAttribute="height" constant="100" id="uOj-RK-B7s"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H9D-KK-7R1">
+                                <rect key="frame" x="140" y="160" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Wph-qI-Bmh"/>
+                                    <constraint firstAttribute="height" constant="100" id="bgY-Ml-rEf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="191-79-ECb">
+                                <rect key="frame" x="260" y="160" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LGH-Hg-dbb"/>
+                                    <constraint firstAttribute="height" constant="100" id="XHd-sf-awv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz0-Bq-tzw">
+                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.21480588740000001" blue="0.34881751080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cu9-r5-xXp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Pick Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="PickImageButtonAction:" destination="Ye3-NW-Fmt" eventType="touchUpInside" id="qNu-Py-Rn9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P1Q-gD-CgS" firstAttribute="leading" secondItem="71W-hJ-Fdu" secondAttribute="leading" constant="20" id="1RN-c8-95X"/>
+                            <constraint firstItem="H9D-KK-7R1" firstAttribute="top" secondItem="XkB-o9-EK3" secondAttribute="bottom" constant="20" id="5fl-a5-MrG"/>
+                            <constraint firstItem="kQN-g8-cyC" firstAttribute="leading" secondItem="71W-hJ-Fdu" secondAttribute="leading" constant="20" id="8Wf-eV-myw"/>
+                            <constraint firstItem="191-79-ECb" firstAttribute="leading" secondItem="H9D-KK-7R1" secondAttribute="trailing" constant="20" id="9Iq-Mr-oLg"/>
+                            <constraint firstItem="71W-hJ-Fdu" firstAttribute="trailing" secondItem="uz0-Bq-tzw" secondAttribute="trailing" id="BEG-Nz-V63"/>
+                            <constraint firstItem="XkB-o9-EK3" firstAttribute="top" secondItem="71W-hJ-Fdu" secondAttribute="top" constant="20" id="Bwo-c4-mke"/>
+                            <constraint firstItem="71W-hJ-Fdu" firstAttribute="trailing" secondItem="191-79-ECb" secondAttribute="trailing" constant="15" id="E0Q-75-Rmf"/>
+                            <constraint firstItem="uz0-Bq-tzw" firstAttribute="leading" secondItem="71W-hJ-Fdu" secondAttribute="leading" id="GvB-y7-GFc"/>
+                            <constraint firstItem="dVg-8G-8Ry" firstAttribute="top" secondItem="71W-hJ-Fdu" secondAttribute="top" constant="20" id="HnE-jV-AQa"/>
+                            <constraint firstItem="P1Q-gD-CgS" firstAttribute="top" secondItem="71W-hJ-Fdu" secondAttribute="top" constant="20" id="OwH-G2-o2g"/>
+                            <constraint firstItem="191-79-ECb" firstAttribute="leading" secondItem="H9D-KK-7R1" secondAttribute="trailing" constant="20" id="P05-l2-9Xu"/>
+                            <constraint firstItem="71W-hJ-Fdu" firstAttribute="trailing" secondItem="dVg-8G-8Ry" secondAttribute="trailing" constant="15" id="T5Y-k0-nQl"/>
+                            <constraint firstItem="dVg-8G-8Ry" firstAttribute="leading" secondItem="XkB-o9-EK3" secondAttribute="trailing" constant="20" id="dt3-Bv-rkV"/>
+                            <constraint firstItem="71W-hJ-Fdu" firstAttribute="bottom" secondItem="uz0-Bq-tzw" secondAttribute="bottom" id="f6U-Gi-aZc"/>
+                            <constraint firstItem="kQN-g8-cyC" firstAttribute="top" secondItem="P1Q-gD-CgS" secondAttribute="bottom" constant="20" id="fdn-yV-P69"/>
+                            <constraint firstItem="H9D-KK-7R1" firstAttribute="leading" secondItem="kQN-g8-cyC" secondAttribute="trailing" constant="20" id="keD-R6-soa"/>
+                            <constraint firstItem="H9D-KK-7R1" firstAttribute="leading" secondItem="kQN-g8-cyC" secondAttribute="trailing" constant="20" id="lfW-hG-G3p"/>
+                            <constraint firstItem="191-79-ECb" firstAttribute="top" secondItem="dVg-8G-8Ry" secondAttribute="bottom" constant="20" id="sIO-Sd-7xP"/>
+                            <constraint firstItem="XkB-o9-EK3" firstAttribute="leading" secondItem="P1Q-gD-CgS" secondAttribute="trailing" constant="20" id="vxA-Ym-Dh8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="71W-hJ-Fdu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" id="tkz-LF-Tco"/>
+                    <connections>
+                        <outlet property="image1" destination="P1Q-gD-CgS" id="buh-ge-dFt"/>
+                        <outlet property="image2" destination="XkB-o9-EK3" id="Art-lk-Te9"/>
+                        <outlet property="image3" destination="dVg-8G-8Ry" id="FVv-PQ-KNO"/>
+                        <outlet property="image4" destination="kQN-g8-cyC" id="iDa-Mr-I04"/>
+                        <outlet property="image5" destination="H9D-KK-7R1" id="uMO-gy-D45"/>
+                        <outlet property="image6" destination="191-79-ECb" id="LpS-Lz-Raf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hb3-jD-Fb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747" y="1541"/>
         </scene>
         <!--View Signature View Controller-->
         <scene sceneID="db0-Ej-rvy">

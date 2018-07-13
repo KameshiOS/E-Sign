@@ -45,5 +45,9 @@
 	</array>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Add this Pattern lock as image</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need to use camera to take image</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need to access your photo Library to pick image</string>
 </dict>
 </plist>

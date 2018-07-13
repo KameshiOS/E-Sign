@@ -4,3 +4,4 @@
 
 #import "OXPatternLock/OXPatternLock-umbrella.h"
 #import "ChromaColorPicker/ChromaColorPicker-umbrella.h"
+#import "ImagePicker/ImagePicker-umbrella.h"

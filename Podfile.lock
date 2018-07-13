@@ -1,20 +1,24 @@
 PODS:
   - ChromaColorPicker (1.7)
+  - ImagePicker (3.0.0)
   - OXPatternLock (1.0)
 
 DEPENDENCIES:
   - ChromaColorPicker
+  - ImagePicker
   - OXPatternLock
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ChromaColorPicker
+    - ImagePicker
     - OXPatternLock
 
 SPEC CHECKSUMS:
   ChromaColorPicker: 33efa67b17cca51dd253689d18b83ac7e05642c2
+  ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
   OXPatternLock: 02fec8b67839018dcaa2765011933e5648cb714a
 
-PODFILE CHECKSUM: d1c77c67acbedfe5eaedaf24d9e813008642dcb5
+PODFILE CHECKSUM: 2c625b127bbe005401b62e7a0af127da089e3cb3
 
 COCOAPODS: 1.5.2
